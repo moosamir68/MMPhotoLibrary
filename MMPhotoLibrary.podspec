@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = A short description of MMPhotoLibrary.'
+  s.description      = 'A short description of MMPhotoLibrary.'
 
   s.homepage         = 'https://github.com/moosamir68/MMPhotoLibrary'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -37,4 +37,8 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'TOCropViewController', '~> 2.3.4'
+  s.dependency 'KTCenterFlowLayout', '~> 1.3.1'
+  s.dependency 'SnapKit', '~> 4.0.0'
+
+
 end

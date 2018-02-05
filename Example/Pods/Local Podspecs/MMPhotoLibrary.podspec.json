@@ -1,9 +1,9 @@
 {
   "name": "MMPhotoLibrary",
   "version": "0.1.0",
-  "summary": "A short description of MMPhotoLibrary.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Moosa Mir/MMPhotoLibrary",
+  "summary": "A short summury of MMPhotoLibrary.",
+  "description": "A short description of MMPhotoLibrary.",
+  "homepage": "https://github.com/moosamir68/MMPhotoLibrary",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,23 @@
     "Moosa Mir": "moosamir68@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Moosa Mir/MMPhotoLibrary.git",
+    "git": "https://github.com/moosamir68/MMPhotoLibrary.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "MMPhotoLibrary/Classes/**/*"
+  "source_files": "MMPhotoLibrary/Classes/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "TOCropViewController": [
+      "~> 2.3.4"
+    ],
+    "KTCenterFlowLayout": [
+      "~> 1.3.1"
+    ],
+    "SnapKit": [
+      "~> 4.0.0"
+    ]
+  }
 }
