@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MMPhotoLibrary_Example' do
+  pod 'MMPhotoLibrary', :path => '../'
+
+  target 'MMPhotoLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
