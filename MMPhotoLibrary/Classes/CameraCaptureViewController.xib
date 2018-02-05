@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraCaptureViewController" customModule="VeeVappSeller" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraView" destination="IiM-Yo-lbd" id="Ghu-Ww-bgv"/>
+                <outlet property="flashButton" destination="Z26-KS-dL1" id="mP0-XZ-5cg"/>
+                <outlet property="libraryButton" destination="tSK-KC-pUU" id="FBC-SV-D4H"/>
+                <outlet property="swipeButton" destination="HVu-Ga-e8b" id="cRB-Yl-saQ"/>
+                <outlet property="takeButton" destination="tQN-kK-qXl" id="EEb-BZ-08y"/>
+                <outlet property="view" destination="KLU-da-sUT" id="cr4-EU-Vfq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KLU-da-sUT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWi-oK-UQF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiM-Yo-lbd">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSK-KC-pUU">
+                            <rect key="frame" x="315" y="607" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="ODO-Fl-PWG"/>
+                                <constraint firstAttribute="height" constant="44" id="UnA-eA-vUc"/>
+                            </constraints>
+                            <state key="normal" image="libraryButton"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVu-Ga-e8b">
+                            <rect key="frame" x="16" y="607" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="CeY-ak-21D"/>
+                                <constraint firstAttribute="height" constant="44" id="edT-KY-e6i"/>
+                            </constraints>
+                            <state key="normal" image="swapButton"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-KS-dL1">
+                            <rect key="frame" x="315" y="16" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="EFX-P5-2sk"/>
+                                <constraint firstAttribute="width" constant="44" id="zEe-gk-EWK"/>
+                            </constraints>
+                            <state key="normal" image="flashAutoIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-kK-qXl">
+                            <rect key="frame" x="148" y="579" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="8lw-Ee-sBJ"/>
+                                <constraint firstAttribute="height" constant="80" id="hxm-JL-LSh"/>
+                            </constraints>
+                            <state key="normal" image="cameraButton"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tQN-kK-qXl" secondAttribute="bottom" constant="8" id="Bg2-YM-gIg"/>
+                        <constraint firstItem="tQN-kK-qXl" firstAttribute="centerX" secondItem="KWi-oK-UQF" secondAttribute="centerX" id="I8d-VP-ZFb"/>
+                        <constraint firstAttribute="trailing" secondItem="IiM-Yo-lbd" secondAttribute="trailing" id="Kxc-UF-UXD"/>
+                        <constraint firstAttribute="trailing" secondItem="tSK-KC-pUU" secondAttribute="trailing" constant="16" id="TE6-pe-aE6"/>
+                        <constraint firstAttribute="trailing" secondItem="Z26-KS-dL1" secondAttribute="trailing" constant="16" id="aBO-y2-Hzy"/>
+                        <constraint firstAttribute="bottom" secondItem="tSK-KC-pUU" secondAttribute="bottom" constant="16" id="kaE-4E-4ox"/>
+                        <constraint firstItem="IiM-Yo-lbd" firstAttribute="leading" secondItem="KWi-oK-UQF" secondAttribute="leading" id="lGm-jz-DNt"/>
+                        <constraint firstAttribute="bottom" secondItem="IiM-Yo-lbd" secondAttribute="bottom" id="mAO-2W-GeU"/>
+                        <constraint firstItem="IiM-Yo-lbd" firstAttribute="top" secondItem="KWi-oK-UQF" secondAttribute="top" id="qcb-9O-i5l"/>
+                        <constraint firstItem="Z26-KS-dL1" firstAttribute="top" secondItem="KWi-oK-UQF" secondAttribute="top" constant="16" id="rO0-s7-Vky"/>
+                        <constraint firstItem="HVu-Ga-e8b" firstAttribute="leading" secondItem="KWi-oK-UQF" secondAttribute="leading" constant="16" id="xN7-ke-674"/>
+                        <constraint firstAttribute="bottom" secondItem="HVu-Ga-e8b" secondAttribute="bottom" constant="16" id="y1P-4p-gfA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KWi-oK-UQF" firstAttribute="top" secondItem="KLU-da-sUT" secondAttribute="top" id="62e-oK-aou"/>
+                <constraint firstItem="KWi-oK-UQF" firstAttribute="leading" secondItem="j8b-Fe-Zi0" secondAttribute="leading" id="iha-gF-czL"/>
+                <constraint firstItem="KWi-oK-UQF" firstAttribute="trailing" secondItem="j8b-Fe-Zi0" secondAttribute="trailing" id="jsQ-wT-I7K"/>
+                <constraint firstItem="KWi-oK-UQF" firstAttribute="bottom" secondItem="j8b-Fe-Zi0" secondAttribute="bottom" id="q2x-TY-xcZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="j8b-Fe-Zi0"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cameraButton" width="80" height="80"/>
+        <image name="flashAutoIcon" width="44" height="44"/>
+        <image name="libraryButton" width="44" height="44"/>
+        <image name="swapButton" width="44" height="44"/>
+    </resources>
+</document>

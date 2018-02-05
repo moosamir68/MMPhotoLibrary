@@ -1,0 +1,6 @@
+framework module MMPhotoLibrary {
+  umbrella header "MMPhotoLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}
