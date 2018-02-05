@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import KTCenterFlowLayout
 
-public protocol PhotosDelegate {
+public protocol MMPhotosDelegate {
     func resultSelectPhotoFromPhotos(image:UIImage?)
 }
 
@@ -22,7 +22,7 @@ public class MMPhotosViewController: UIViewController, UICollectionViewDelegate,
     var fetchResults:PHFetchResult<PHAsset>?
     var assetThumbnailSize: CGSize!
     
-    var delegate:PhotosDelegate?
+    var delegate:MMPhotosDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()

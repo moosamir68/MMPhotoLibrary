@@ -11,7 +11,7 @@ import Photos
 import TOCropViewController
 import SnapKit
 
-public protocol CameraCaptureDelegate {
+public protocol MMCameraCaptureDelegate {
     func createPhotosCollection(fromController:MMCameraCaptureViewController?) -> MMPhotosViewController?
     func dismissCameraController(fromController:MMCameraCaptureViewController?)
     func showCroperFromCameraController(fromController:MMCameraCaptureViewController?, image:UIImage?)
@@ -19,7 +19,7 @@ public protocol CameraCaptureDelegate {
     func resultCropImage(fromController:MMCameraCaptureViewController?, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int)
 }
 
-public protocol VVCameraPublicDelegate {
+public protocol MMCameraPublicDelegate {
     func showCamera(fromController:UIViewController?)
     func dismissCameraCapture(fromController:UIViewController?, cameraController:MMCameraCaptureViewController?)
     
@@ -29,7 +29,7 @@ public protocol VVCameraPublicDelegate {
     func dismissCroper(croper:TOCropViewController?, fromController:UIViewController?)
 }
 
-public class MMCameraCaptureViewController: UIViewController, PhotosDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
+public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     
 
     @IBOutlet weak var flashButton: UIButton!
@@ -48,7 +48,7 @@ public class MMCameraCaptureViewController: UIViewController, PhotosDelegate, UI
     }
     var takeImage:UIImage?
     
-    public var delegate:CameraCaptureDelegate?
+    public var delegate:MMCameraCaptureDelegate?
     var flashMode:UIImagePickerControllerCameraFlashMode = .auto
     var cameraDevice:UIImagePickerControllerCameraDevice = .rear
     var sourceType:UIImagePickerControllerSourceType = .camera
