@@ -18,7 +18,7 @@ public protocol MMCameraCaptureDelegate {
     func dismissCroper(fromController:MMCameraCaptureViewController?, cropper:TOCropViewController?)
     func resultCropImage(fromController:MMCameraCaptureViewController?, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int)
 }
-
+ 
 public protocol MMCameraPublicDelegate {
     func showCamera(fromController:UIViewController?)
     func dismissCameraCapture(fromController:UIViewController?, cameraController:MMCameraCaptureViewController?)
