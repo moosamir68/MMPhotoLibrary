@@ -22,7 +22,7 @@ public class MMPhotosViewController: UIViewController, UICollectionViewDelegate,
     var fetchResults:PHFetchResult<PHAsset>?
     var assetThumbnailSize: CGSize!
     
-    var delegate:MMPhotosDelegate?
+    public var delegate:MMPhotosDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
