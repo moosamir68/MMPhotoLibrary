@@ -58,7 +58,6 @@
 		6782307ECFAC2B16F9B97E3F04590250 /* Pods-MMPhotoLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B159140EEF2DB3478A2E50B8DA145D48 /* Pods-MMPhotoLibrary_Example-dummy.m */; };
 		699DF8F49BA40EAA99C8991FD7BDB4BC /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC84B3ED4F82A59CBC95591FF187CD /* ConstraintLayoutSupport.swift */; };
 		6D56A7668AB753FF0840EFCF27467BBD /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D353D2534481BAC1B97BCE7A7B298 /* TOCroppedImageAttributes.m */; };
-		6E28C1562028C4C000F29DB1 /* MMLibraryPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28C1542028C4BF00F29DB1 /* MMLibraryPhotoCollectionViewCell.swift */; };
 		70805FB9925EFBE40F7C7E321E38FBC8 /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5171B3EE52ED512F77661AECDED323 /* TOCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7556A0737C87BEB2797BA94757864A71 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F59A8DBD26C4294A1525BD655AF6A /* ConstraintMakerEditable.swift */; };
 		7AF14E65A29C47259B40980EB563B5E9 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 51FC41E2769E38C8D75ABA8B2AC39091 /* vi.lproj */; };
@@ -239,8 +238,6 @@
 		65E04AD2DC3C28B6FA9357CAAD8AC6BA /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687A5898311879C84D8CC6C6505472FA /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		6AF3B11AE5E53C3C1BF4C0F4C8CB7C54 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		6E28C1542028C4BF00F29DB1 /* MMLibraryPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMLibraryPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		6E28C1552028C4BF00F29DB1 /* MMLibraryPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMLibraryPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		70DB6805397BEE87DDDEC2DF15AFEA39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726B43EDEE7A0A52A44D2E68AA296647 /* TOCropToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = "Objective-C/TOCropViewController/Views/TOCropToolbar.m"; sourceTree = "<group>"; };
 		75143B4360EC63D60D577959C436EE1C /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
@@ -512,16 +509,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		6E28C1502028C3A600F29DB1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6E28C1542028C4BF00F29DB1 /* MMLibraryPhotoCollectionViewCell.swift */,
-				6E28C1552028C4BF00F29DB1 /* MMLibraryPhotoCollectionViewCell.xib */,
-			);
-			name = View;
-			path = MMPhotoLibrary/Classes/View;
-			sourceTree = "<group>";
-		};
 		739E3FFC02D6E92EFE32270780151D17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,7 +587,6 @@
 		C3B5FCC30A58337D5BA7C98100021815 /* MMPhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				6E28C1502028C3A600F29DB1 /* View */,
 				55BE6157937478781B4057FB75936EB5 /* MMCameraCaptureViewController.swift */,
 				18704889441953CE0405F8AC9CC0BDDD /* MMCameraCaptureViewController.xib */,
 				5F7679BCCB7C2B97802F56845C7114BA /* MMPhotosViewController.swift */,
@@ -966,7 +952,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E28C1562028C4C000F29DB1 /* MMLibraryPhotoCollectionViewCell.swift in Sources */,
 				01917645417171C209E7E4A9A0FB5DF0 /* KTCenterFlowLayout-dummy.m in Sources */,
 				89B49F76C436236951727C520878878C /* KTCenterFlowLayout.m in Sources */,
 			);
