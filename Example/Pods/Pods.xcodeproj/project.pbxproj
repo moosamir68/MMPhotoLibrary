@@ -50,6 +50,7 @@
 		59772C80403C3DD3E764EDA5A71DB832 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FDF793A852FB0EF5BC4E360E50864 /* Debugging.swift */; };
 		5C98CE4FB97CA1BFFC31FA06FFB880C1 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD196272A6B2C3250A3839E054B568D /* ConstraintPriority.swift */; };
 		5E2A5C920C584C93D868058F7387273F /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7EF24E869E1D5B40CC6F2B5E7D397E07 /* da.lproj */; };
+		5E43ADEF0A2B01577D66411B06AE8F01 /* MMLibraryPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200554B9AD2B52E51F8951C6186867C9 /* MMLibraryPhotoCollectionViewCell.swift */; };
 		5E4D3566BE531210BCC6BDCE7445A9BB /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E14A3112360A8C1BF1A44B2833C3DF /* ConstraintOffsetTarget.swift */; };
 		5EA23B0EAFD03891DC689BE75B0D6D59 /* TOCropViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14951040FCC4A10C606D72946F60B413 /* TOCropViewController-dummy.m */; };
 		5FA0A47D7292AD151D12780FE39A5F7E /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 22ECAAC27530C4978DB4945D752B3FC6 /* pt.lproj */; };
@@ -58,8 +59,6 @@
 		6782307ECFAC2B16F9B97E3F04590250 /* Pods-MMPhotoLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B159140EEF2DB3478A2E50B8DA145D48 /* Pods-MMPhotoLibrary_Example-dummy.m */; };
 		699DF8F49BA40EAA99C8991FD7BDB4BC /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC84B3ED4F82A59CBC95591FF187CD /* ConstraintLayoutSupport.swift */; };
 		6D56A7668AB753FF0840EFCF27467BBD /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D353D2534481BAC1B97BCE7A7B298 /* TOCroppedImageAttributes.m */; };
-		6E4A8AF42029914400426783 /* MMLibraryPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A8AF22029914400426783 /* MMLibraryPhotoCollectionViewCell.swift */; };
-		6E4A8AF52029914400426783 /* MMLibraryPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A8AF32029914400426783 /* MMLibraryPhotoCollectionViewCell.xib */; };
 		70805FB9925EFBE40F7C7E321E38FBC8 /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5171B3EE52ED512F77661AECDED323 /* TOCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7556A0737C87BEB2797BA94757864A71 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F59A8DBD26C4294A1525BD655AF6A /* ConstraintMakerEditable.swift */; };
 		7AF14E65A29C47259B40980EB563B5E9 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 51FC41E2769E38C8D75ABA8B2AC39091 /* vi.lproj */; };
@@ -89,6 +88,7 @@
 		B96A8EFE00E4400CBC0C08E3F6B57278 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3726F638341FA5991B00A3EBD01E0FC /* ConstraintPriorityTarget.swift */; };
 		BABEF367FD4C70846F7AC90A9D732E90 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5718C2CBACA78F222B77265580533A64 /* ConstraintView+Extensions.swift */; };
 		BB95396E051E7D2B7790D6FA7A946EFD /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECD14EB28DEC7DD496F7D08E1B1BC4 /* LayoutConstraintItem.swift */; };
+		BD27F02A57FDCAADCD32D40634C07C8F /* MMLibraryPhotoCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = CDAE6EBC6DF075E3E4E461D27BA5DEE6 /* MMLibraryPhotoCollectionViewCell.xib */; };
 		BE183CFC64E4097810AD9FEE84AB1424 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EC3800873A604D254D9D4A7A857AC471 /* ru.lproj */; };
 		BFA410AE0BDEDB7DB41103822B7AB37D /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAFA8014CB287FEC0847E8E97DCC20 /* ConstraintLayoutGuide.swift */; };
 		C1B74312DC10A508C1E6A3B5E2D72804 /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 16E862CA44CABA81617EEDF2CEF97E20 /* ar.lproj */; };
@@ -173,42 +173,43 @@
 /* Begin PBXFileReference section */
 		01A6D2E434D483E316B5046F158C1622 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		01CAE246418AFC16F2097A039FF66FCE /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		02531C1F831B4E05608C37A0EDBE42FD /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		02531C1F831B4E05608C37A0EDBE42FD /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TOCropViewControllerBundle.bundle; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0535238EA3D2816488011C252F655AEC /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		07B5C9AFD36A060CBACEC6C461F0F916 /* TOCropScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = "Objective-C/TOCropViewController/Views/TOCropScrollView.h"; sourceTree = "<group>"; };
 		0A09A211D6F20602089A7B67B4B53F72 /* UIImage+CropRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "Objective-C/TOCropViewController/Models/UIImage+CropRotate.h"; sourceTree = "<group>"; };
 		0B085CD71F92189FD9EDBA4CE370CFF4 /* MMPhotoLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMPhotoLibrary-umbrella.h"; sourceTree = "<group>"; };
 		0B829E1CB68A4BD0E7870FD162F0D54A /* TOCropScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = "Objective-C/TOCropViewController/Views/TOCropScrollView.m"; sourceTree = "<group>"; };
-		0C003173D383939E7D82BD8A9EE41E9A /* MMPhotoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMPhotoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C32E530E8620AF563559D125DB324E8 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = "Objective-C/TOCropViewController/ko.lproj"; sourceTree = "<group>"; };
+		0C003173D383939E7D82BD8A9EE41E9A /* MMPhotoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MMPhotoLibrary.framework; path = MMPhotoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C32E530E8620AF563559D125DB324E8 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = "Objective-C/TOCropViewController/ko.lproj"; sourceTree = "<group>"; };
 		0C62B2531651EB23C67C7F9B73C92D41 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		0EEF0B04400AD3EA0059B691B6F4C2B6 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = "Objective-C/TOCropViewController/Base.lproj"; sourceTree = "<group>"; };
+		0EEF0B04400AD3EA0059B691B6F4C2B6 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = "Objective-C/TOCropViewController/Base.lproj"; sourceTree = "<group>"; };
 		1431DBC900A47FD94440DEA67113E823 /* KTCenterFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KTCenterFlowLayout-prefix.pch"; sourceTree = "<group>"; };
 		14951040FCC4A10C606D72946F60B413 /* TOCropViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOCropViewController-dummy.m"; sourceTree = "<group>"; };
 		14F9B935794873E8E097E38E9065C6D7 /* Pods-MMPhotoLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMPhotoLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		16E862CA44CABA81617EEDF2CEF97E20 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = "Objective-C/TOCropViewController/ar.lproj"; sourceTree = "<group>"; };
-		1715D0AAE1DD8D048451999E3FC0C5BF /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = "Objective-C/TOCropViewController/tr.lproj"; sourceTree = "<group>"; };
+		16E862CA44CABA81617EEDF2CEF97E20 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = "Objective-C/TOCropViewController/ar.lproj"; sourceTree = "<group>"; };
+		1715D0AAE1DD8D048451999E3FC0C5BF /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = "Objective-C/TOCropViewController/tr.lproj"; sourceTree = "<group>"; };
 		179457FBEB4B88C76F03BC9325DC2B71 /* TOCropOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = "Objective-C/TOCropViewController/Views/TOCropOverlayView.h"; sourceTree = "<group>"; };
-		17DFF3F5C243EAAF74F05C0356E3A62B /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17DFF3F5C243EAAF74F05C0356E3A62B /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18704889441953CE0405F8AC9CC0BDDD /* MMCameraCaptureViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = MMCameraCaptureViewController.xib; path = MMPhotoLibrary/Classes/MMCameraCaptureViewController.xib; sourceTree = "<group>"; };
 		1908F37799810F6500C206EFD1752676 /* KTCenterFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KTCenterFlowLayout.h; sourceTree = "<group>"; };
 		19E15719B9D48BA8BFBA86B40D1D38DA /* Pods-MMPhotoLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MMPhotoLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		19F3367FFE6376F5F495ACB83FE3F841 /* Pods-MMPhotoLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MMPhotoLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1E8F49801FE5120322B6838D75C72299 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		1F32A73DDB25BB415DCBE0718B2CDC51 /* TOCropView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = "Objective-C/TOCropViewController/Views/TOCropView.m"; sourceTree = "<group>"; };
+		200554B9AD2B52E51F8951C6186867C9 /* MMLibraryPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMLibraryPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2057F85098A5CB2405EDFEBC63202DEF /* Pods-MMPhotoLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MMPhotoLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		22CE607C7876EB4741435365372763A4 /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = "Objective-C/TOCropViewController/Models/TOActivityCroppedImageProvider.h"; sourceTree = "<group>"; };
-		22ECAAC27530C4978DB4945D752B3FC6 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = "Objective-C/TOCropViewController/pt.lproj"; sourceTree = "<group>"; };
+		22ECAAC27530C4978DB4945D752B3FC6 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "Objective-C/TOCropViewController/pt.lproj"; sourceTree = "<group>"; };
 		25909A000FC9483C901E2890C02F0550 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		26E468A38B689C54185E9C39B7CDA86D /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		291FBE10AE2AEFE5D1BD6237A59ED4C9 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		2DFFBC97624087250B4915F4B8CF2B59 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		333D353D2534481BAC1B97BCE7A7B298 /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = "Objective-C/TOCropViewController/Models/TOCroppedImageAttributes.m"; sourceTree = "<group>"; };
 		337F59A8DBD26C4294A1525BD655AF6A /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		34DA6B9A96A85A5C69F75CF5B1FAA130 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Objective-C/TOCropViewController/zh-Hant.lproj"; sourceTree = "<group>"; };
-		35B3DBB3E24BE2F043A4F14DFC14B67A /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = "Objective-C/TOCropViewController/nl.lproj"; sourceTree = "<group>"; };
-		37ED589DC22AB789269C6B5605E81447 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = "Objective-C/TOCropViewController/en.lproj"; sourceTree = "<group>"; };
-		39833B51457A44304009BDDFD26E57AF /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DA6B9A96A85A5C69F75CF5B1FAA130 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Objective-C/TOCropViewController/zh-Hant.lproj"; sourceTree = "<group>"; };
+		35B3DBB3E24BE2F043A4F14DFC14B67A /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "Objective-C/TOCropViewController/nl.lproj"; sourceTree = "<group>"; };
+		37ED589DC22AB789269C6B5605E81447 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "Objective-C/TOCropViewController/en.lproj"; sourceTree = "<group>"; };
+		39833B51457A44304009BDDFD26E57AF /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KTCenterFlowLayout.framework; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAAFA8014CB287FEC0847E8E97DCC20 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		3D036C82263ECA67353BFDE04F4E2142 /* Pods-MMPhotoLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MMPhotoLibrary_Example-resources.sh"; sourceTree = "<group>"; };
 		3EF70D8C007F76723F9234DF48898F31 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,15 +219,15 @@
 		46A5BF3D35BF88770A22BF80185A57C4 /* MMPhotoLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMPhotoLibrary-prefix.pch"; sourceTree = "<group>"; };
 		4E6340422B364CC71652A3C6005C07A5 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		4EAB317541D48CCA80A1FF345B283D03 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		4EC48FD81C6600FEC9CCEC3AE39FD784 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = "Objective-C/TOCropViewController/ja.lproj"; sourceTree = "<group>"; };
+		4EC48FD81C6600FEC9CCEC3AE39FD784 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "Objective-C/TOCropViewController/ja.lproj"; sourceTree = "<group>"; };
 		4EE41786E539419C28B529135B803435 /* TOCropViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOCropViewController.xcconfig; sourceTree = "<group>"; };
 		4F373CBCC3A633BAD8DB0E9B5276DB6B /* MMPhotosViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = MMPhotosViewController.xib; path = MMPhotoLibrary/Classes/MMPhotosViewController.xib; sourceTree = "<group>"; };
 		4F5171B3EE52ED512F77661AECDED323 /* TOCropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = "Objective-C/TOCropViewController/Views/TOCropView.h"; sourceTree = "<group>"; };
-		4F658FA706B3282D14FC60A784D5BB00 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = "Objective-C/TOCropViewController/pl.lproj"; sourceTree = "<group>"; };
+		4F658FA706B3282D14FC60A784D5BB00 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = "Objective-C/TOCropViewController/pl.lproj"; sourceTree = "<group>"; };
 		50A1ED6DDB3291A32B4393DF99BE2060 /* TOCropViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-prefix.pch"; sourceTree = "<group>"; };
-		51FC41E2769E38C8D75ABA8B2AC39091 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = "Objective-C/TOCropViewController/vi.lproj"; sourceTree = "<group>"; };
+		51FC41E2769E38C8D75ABA8B2AC39091 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = "Objective-C/TOCropViewController/vi.lproj"; sourceTree = "<group>"; };
 		543BAE5A6E0BFD812C0C2FCA02945189 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		554D54D4E4DB5F8FCC078F7255D701B3 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = "Objective-C/TOCropViewController/id.lproj"; sourceTree = "<group>"; };
+		554D54D4E4DB5F8FCC078F7255D701B3 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = "Objective-C/TOCropViewController/id.lproj"; sourceTree = "<group>"; };
 		55BE6157937478781B4057FB75936EB5 /* MMCameraCaptureViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MMCameraCaptureViewController.swift; path = MMPhotoLibrary/Classes/MMCameraCaptureViewController.swift; sourceTree = "<group>"; };
 		5718C2CBACA78F222B77265580533A64 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		57D6CF1A374D777FF4E3CAF2B2743D0A /* MMPhotoLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMPhotoLibrary.xcconfig; sourceTree = "<group>"; };
@@ -240,61 +241,60 @@
 		65E04AD2DC3C28B6FA9357CAAD8AC6BA /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687A5898311879C84D8CC6C6505472FA /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		6AF3B11AE5E53C3C1BF4C0F4C8CB7C54 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		6E4A8AF22029914400426783 /* MMLibraryPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMLibraryPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		6E4A8AF32029914400426783 /* MMLibraryPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMLibraryPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		70DB6805397BEE87DDDEC2DF15AFEA39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726B43EDEE7A0A52A44D2E68AA296647 /* TOCropToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = "Objective-C/TOCropViewController/Views/TOCropToolbar.m"; sourceTree = "<group>"; };
 		75143B4360EC63D60D577959C436EE1C /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		781FAE5EC5F1D0D2E7F86589C8CFA60F /* UIImage+CropRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "Objective-C/TOCropViewController/Models/UIImage+CropRotate.m"; sourceTree = "<group>"; };
 		7904B575F050BF9ECECAF02D825C5C99 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		79632895FBF2047DE3C6F3C0ADA8E0D4 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		797F53A8FFDD0164988592ADB79C5F09 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = "Objective-C/TOCropViewController/fr.lproj"; sourceTree = "<group>"; };
-		79A94C05456F0E63BF70F32CF0DC6956 /* Pods_MMPhotoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMPhotoLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CB6A48ACF2769111774EF787C19E8E8 /* TOCropViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TOCropViewController.modulemap; sourceTree = "<group>"; };
+		797F53A8FFDD0164988592ADB79C5F09 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "Objective-C/TOCropViewController/fr.lproj"; sourceTree = "<group>"; };
+		79A94C05456F0E63BF70F32CF0DC6956 /* Pods_MMPhotoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MMPhotoLibrary_Example.framework; path = "Pods-MMPhotoLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB6A48ACF2769111774EF787C19E8E8 /* TOCropViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TOCropViewController.modulemap; sourceTree = "<group>"; };
 		7D73D1123F750AF4414D8E7DA4659550 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DD196272A6B2C3250A3839E054B568D /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		7E5A03811C5681A9EC6CBDB0EA284041 /* Pods-MMPhotoLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MMPhotoLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7EF24E869E1D5B40CC6F2B5E7D397E07 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = "Objective-C/TOCropViewController/da.lproj"; sourceTree = "<group>"; };
+		7EF24E869E1D5B40CC6F2B5E7D397E07 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = "Objective-C/TOCropViewController/da.lproj"; sourceTree = "<group>"; };
 		7FFF4E06896070FF9FEA631618F01637 /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "Objective-C/TOCropViewController/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		805F31D0A07B24587F9D0D7E065F00F4 /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = "Objective-C/TOCropViewController/Models/TOCroppedImageAttributes.h"; sourceTree = "<group>"; };
 		80767C7344ED8C811C15879357C3934C /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = "Objective-C/TOCropViewController/Models/TOCropViewControllerTransitioning.h"; sourceTree = "<group>"; };
-		823A0D90C744AD3F97AD560C112C5385 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		823A0D90C744AD3F97AD560C112C5385 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		84412F7B8AF6A16CB29A222E9C3E7504 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		85CED942D7B81064E00A9CF4CB2D42E8 /* KTCenterFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KTCenterFlowLayout.m; sourceTree = "<group>"; };
 		86F3E87811987B2B728463FD6E5F7490 /* TOCropViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = "Objective-C/TOCropViewController/TOCropViewController.h"; sourceTree = "<group>"; };
-		88CAEBD7E9C56D28407023FCF6151E01 /* Pods-MMPhotoLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MMPhotoLibrary_Example.modulemap"; sourceTree = "<group>"; };
+		88CAEBD7E9C56D28407023FCF6151E01 /* Pods-MMPhotoLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MMPhotoLibrary_Example.modulemap"; sourceTree = "<group>"; };
 		88CCAA8BF611679CB17B038C97327A7C /* TOCropViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = "Objective-C/TOCropViewController/TOCropViewController.m"; sourceTree = "<group>"; };
 		8B5A026CFDC773F76C8ACF95F5E59378 /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = "Objective-C/TOCropViewController/Models/TOActivityCroppedImageProvider.m"; sourceTree = "<group>"; };
-		8C6622DAEA0B7D89475F0F1D32D1C39D /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = "Objective-C/TOCropViewController/de.lproj"; sourceTree = "<group>"; };
+		8C6622DAEA0B7D89475F0F1D32D1C39D /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "Objective-C/TOCropViewController/de.lproj"; sourceTree = "<group>"; };
 		8DB51165724588137FAE049F8C3C9907 /* KTCenterFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KTCenterFlowLayout-dummy.m"; sourceTree = "<group>"; };
 		8EDC84B3ED4F82A59CBC95591FF187CD /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		8FC940D0466F187FE39D86DADA1EBB5A /* KTCenterFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KTCenterFlowLayout.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CF28C3A156D7A3679CA0AFDAEDD75B4 /* Pods-MMPhotoLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MMPhotoLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
 		A11D419B7FFC05B8490FDC9EB84924F8 /* TOCropViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-umbrella.h"; sourceTree = "<group>"; };
-		A1DB871C5AB38BC5CABC2FAD5253072C /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Objective-C/TOCropViewController/zh-Hans.lproj"; sourceTree = "<group>"; };
-		A52A47706C386038B1EFEB5D87E08641 /* MMPhotoLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMPhotoLibrary.modulemap; sourceTree = "<group>"; };
+		A1DB871C5AB38BC5CABC2FAD5253072C /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Objective-C/TOCropViewController/zh-Hans.lproj"; sourceTree = "<group>"; };
+		A52A47706C386038B1EFEB5D87E08641 /* MMPhotoLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MMPhotoLibrary.modulemap; sourceTree = "<group>"; };
 		A835711503B4D7A814FB9636108990EA /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		B159140EEF2DB3478A2E50B8DA145D48 /* Pods-MMPhotoLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MMPhotoLibrary_Example-dummy.m"; sourceTree = "<group>"; };
 		B321DD9DC168FD86941F1CC008CA7E5B /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		B3726F638341FA5991B00A3EBD01E0FC /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		C0DC088B40FE665FE022DE3CBE906D26 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		C3DDBDC919F57DD1FE833C0A55DAADB8 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = "Objective-C/TOCropViewController/it.lproj"; sourceTree = "<group>"; };
+		C3DDBDC919F57DD1FE833C0A55DAADB8 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "Objective-C/TOCropViewController/it.lproj"; sourceTree = "<group>"; };
 		C44F92AF00E2DF6D9AC8FA7013FFB7C6 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
 		C45FADB808A368CF5E6EF0D147D99C6E /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		C560E850A7D68A847C8C648687FDEBD8 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = "Objective-C/TOCropViewController/es.lproj"; sourceTree = "<group>"; };
+		C560E850A7D68A847C8C648687FDEBD8 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "Objective-C/TOCropViewController/es.lproj"; sourceTree = "<group>"; };
+		CDAE6EBC6DF075E3E4E461D27BA5DEE6 /* MMLibraryPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MMLibraryPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4130AC6B78F5675DB40D840440E5CC5 /* TOCropOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = "Objective-C/TOCropViewController/Views/TOCropOverlayView.m"; sourceTree = "<group>"; };
-		D92FB0028CF62DDD4DC64EE928F3727E /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92FB0028CF62DDD4DC64EE928F3727E /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOCropViewController.framework; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADE5C93646DD8AAD780B52231019A40 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		DB33638B2947B4C0A4BBD3724D6D9127 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ms.lproj; path = "Objective-C/TOCropViewController/ms.lproj"; sourceTree = "<group>"; };
+		DB33638B2947B4C0A4BBD3724D6D9127 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ms.lproj; path = "Objective-C/TOCropViewController/ms.lproj"; sourceTree = "<group>"; };
 		DF4D9FE9F6239FA76759DC153A833365 /* TOCropToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = "Objective-C/TOCropViewController/Views/TOCropToolbar.h"; sourceTree = "<group>"; };
 		E76FCDF3CAE770099EE37C48491F66C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8ADD5E06572465959F14C05D6271FC2 /* KTCenterFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KTCenterFlowLayout-umbrella.h"; sourceTree = "<group>"; };
 		E8ECD14EB28DEC7DD496F7D08E1B1BC4 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		EC3800873A604D254D9D4A7A857AC471 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = "Objective-C/TOCropViewController/ru.lproj"; sourceTree = "<group>"; };
+		EC3800873A604D254D9D4A7A857AC471 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "Objective-C/TOCropViewController/ru.lproj"; sourceTree = "<group>"; };
 		F05EDBE6F58D0CF1BE11949885B39CEB /* MMPhotoLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMPhotoLibrary-dummy.m"; sourceTree = "<group>"; };
 		F11FDF793A852FB0EF5BC4E360E50864 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		F1C2A4C1944E3045CE8205B24ACF0CB4 /* KTCenterFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KTCenterFlowLayout.modulemap; sourceTree = "<group>"; };
+		F1C2A4C1944E3045CE8205B24ACF0CB4 /* KTCenterFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KTCenterFlowLayout.modulemap; sourceTree = "<group>"; };
 		F2297806B2ADC247BE4377BDE14226F7 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		F4B86EDBC3D7124581C56B09B83028D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6888DC8CEA87FEADCFEE7E8B10013ED /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
@@ -382,7 +382,18 @@
 				85CED942D7B81064E00A9CF4CB2D42E8 /* KTCenterFlowLayout.m */,
 				510D2817CB2528B5C782DFA8D9812E3F /* Support Files */,
 			);
+			name = KTCenterFlowLayout;
 			path = KTCenterFlowLayout;
+			sourceTree = "<group>";
+		};
+		1F421925586A5E3A03982FE91CD46B3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				200554B9AD2B52E51F8951C6186867C9 /* MMLibraryPhotoCollectionViewCell.swift */,
+				CDAE6EBC6DF075E3E4E461D27BA5DEE6 /* MMLibraryPhotoCollectionViewCell.xib */,
+			);
+			name = View;
+			path = MMPhotoLibrary/Classes/View;
 			sourceTree = "<group>";
 		};
 		243296337DA32C49E08A5DE06D20DD22 /* TOCropViewController */ = {
@@ -410,6 +421,7 @@
 				5758850B32EE9BF309838DC103B2B73B /* Resources */,
 				918BCFF3B765B65E554639A1DAA3245F /* Support Files */,
 			);
+			name = TOCropViewController;
 			path = TOCropViewController;
 			sourceTree = "<group>";
 		};
@@ -452,6 +464,7 @@
 				26E468A38B689C54185E9C39B7CDA86D /* UILayoutSupport+Extensions.swift */,
 				D233F381D282917BDE3E9C530CD3D871 /* Support Files */,
 			);
+			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -511,16 +524,6 @@
 				34DA6B9A96A85A5C69F75CF5B1FAA130 /* zh-Hant.lproj */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		6E4A8AF12029914400426783 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6E4A8AF22029914400426783 /* MMLibraryPhotoCollectionViewCell.swift */,
-				6E4A8AF32029914400426783 /* MMLibraryPhotoCollectionViewCell.xib */,
-			);
-			name = View;
-			path = MMPhotoLibrary/Classes/View;
 			sourceTree = "<group>";
 		};
 		739E3FFC02D6E92EFE32270780151D17 /* Products */ = {
@@ -601,12 +604,12 @@
 		C3B5FCC30A58337D5BA7C98100021815 /* MMPhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				6E4A8AF12029914400426783 /* View */,
 				55BE6157937478781B4057FB75936EB5 /* MMCameraCaptureViewController.swift */,
 				18704889441953CE0405F8AC9CC0BDDD /* MMCameraCaptureViewController.xib */,
 				5F7679BCCB7C2B97802F56845C7114BA /* MMPhotosViewController.swift */,
 				4F373CBCC3A633BAD8DB0E9B5276DB6B /* MMPhotosViewController.xib */,
 				9F0B3E3315E6ABC48D0286C421FFB122 /* Support Files */,
+				1F421925586A5E3A03982FE91CD46B3B /* View */,
 			);
 			name = MMPhotoLibrary;
 			path = ../..;
@@ -810,11 +813,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					5B8521E1C93F41AB556C5F55A214ABB6 = {
-						LastSwiftMigration = 0920;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -871,7 +869,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1A1F51F06F3405CC1DDA79D65511C6 /* TOCropViewControllerBundle.bundle in Resources */,
-				6E4A8AF52029914400426783 /* MMLibraryPhotoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,7 +936,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E4A8AF42029914400426783 /* MMLibraryPhotoCollectionViewCell.swift in Sources */,
 				E667338BAD79A0F6480CD662AEDCBFF7 /* TOActivityCroppedImageProvider.m in Sources */,
 				D5B70D3232E5C3BB594A7ADA63728849 /* TOCropOverlayView.m in Sources */,
 				6D56A7668AB753FF0840EFCF27467BBD /* TOCroppedImageAttributes.m in Sources */,
@@ -959,6 +955,8 @@
 			files = (
 				D4CF0EC3D2E2F86C4CBB2F20344EC100 /* MMCameraCaptureViewController.swift in Sources */,
 				9E7397AED4E6CDBD67F25DAA71B11795 /* MMCameraCaptureViewController.xib in Sources */,
+				5E43ADEF0A2B01577D66411B06AE8F01 /* MMLibraryPhotoCollectionViewCell.swift in Sources */,
+				BD27F02A57FDCAADCD32D40634C07C8F /* MMLibraryPhotoCollectionViewCell.xib in Sources */,
 				945383A5104329A2DBCC2242C183B6E2 /* MMPhotoLibrary-dummy.m in Sources */,
 				1FD0D8D95745E820F224295956841F78 /* MMPhotosViewController.swift in Sources */,
 				C41729FFE3D24B97611C91452673398C /* MMPhotosViewController.xib in Sources */,
@@ -1289,7 +1287,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FC940D0466F187FE39D86DADA1EBB5A /* KTCenterFlowLayout.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1466,7 +1463,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FC940D0466F187FE39D86DADA1EBB5A /* KTCenterFlowLayout.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1486,7 +1482,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
