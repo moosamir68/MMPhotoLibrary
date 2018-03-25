@@ -18,7 +18,7 @@ public protocol MMCameraCaptureDelegate {
 
 public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     
-
+    
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var libraryButton: UIButton!
     @IBOutlet weak var swipeButton: UIButton!
@@ -28,7 +28,7 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     var imagePicker:UIImagePickerController?
     var photoController:MMPhotosViewController?
     
-    var libraryImage:UIImage? = UIImage(named: "libraryButton"){
+    var libraryImage:UIImage? = MMCameraCaptureViewController.loadImageStatic(nameString: "libraryButton"){
         didSet{
             
         }
@@ -50,7 +50,7 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.initUI()
         self.setImageForLibraryButton()
@@ -119,33 +119,33 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
                 if(image != nil){
                     self.libraryImage = image
                 }else{
-                    self.libraryImage = UIImage(named: "libraryButton")
+                    self.libraryImage = self.loadImage(nameString: "libraryButton")
                 }
             }
         } else {
-            self.libraryImage = UIImage(named: "libraryButton")
+            self.libraryImage = self.loadImage(nameString: "libraryButton")
         }
         
         if(self.sourceType == .camera){
             self.libraryButton.setImage(self.libraryImage, for: .normal)
         }else{
-            self.libraryButton.setImage(UIImage(named: "camera"), for: .normal)
+            self.libraryButton.setImage(self.loadImage(nameString: "camera"), for: .normal)
         }
     }
     
     func setImageForFlashButton(flashMode:UIImagePickerControllerCameraFlashMode){
         if(flashMode == .auto){
-            self.flashButton.setImage(UIImage(named: "flashAutoIcon"), for: .normal)
+            self.flashButton.setImage(self.loadImage(nameString: "flashAutoIcon"), for: .normal)
             self.imagePicker?.cameraFlashMode = .auto
         }else if(flashMode == .on){
-            self.flashButton.setImage(UIImage(named: "flashOnIcon"), for: .normal)
+            self.flashButton.setImage(self.loadImage(nameString: "flashOnIcon"), for: .normal)
             self.imagePicker?.cameraFlashMode = .on
         }else{
-            self.flashButton.setImage(UIImage(named: "flashOffIcon"), for: .normal)
+            self.flashButton.setImage(self.loadImage(nameString: "flashOffIcon"), for: .normal)
             self.imagePicker?.cameraFlashMode = .off
         }
     }
-
+    
     func setCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice){
         if(cameraDevice == .rear){
             self.imagePicker?.cameraDevice = .rear
@@ -186,7 +186,7 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
         if(self.sourceType == .camera){
             self.sourceType = .photoLibrary
             self.reInitUI(sourceType: self.sourceType)
-            self.libraryButton.setImage(UIImage(named: "camera"), for: .normal)
+            self.libraryButton.setImage(self.loadImage(nameString: "camera"), for: .normal)
             self.flashButton.isHidden = true
             self.swipeButton.isHidden = true
             self.takeButton.isHidden = true
@@ -204,15 +204,15 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     @objc func userDidTapOnFlash() {
         if(self.imagePicker?.cameraDevice == .rear && self.imagePicker?.sourceType == .camera){
             if(self.imagePicker?.cameraFlashMode == .auto){
-                self.flashButton.setImage(UIImage(named: "flashOnIcon"), for: .normal)
+                self.flashButton.setImage(self.loadImage(nameString: "flashOnIcon"), for: .normal)
                 self.imagePicker?.cameraFlashMode = .on
                 self.flashMode = .on
             }else if(self.imagePicker?.cameraFlashMode == .on){
-                self.flashButton.setImage(UIImage(named: "flashOffIcon"), for: .normal)
+                self.flashButton.setImage(self.loadImage(nameString: "flashOffIcon"), for: .normal)
                 self.imagePicker?.cameraFlashMode = .off
                 self.flashMode = .off
             }else{
-                self.flashButton.setImage(UIImage(named: "flashAutoIcon"), for: .normal)
+                self.flashButton.setImage(self.loadImage(nameString: "flashAutoIcon"), for: .normal)
                 self.imagePicker?.cameraFlashMode = .auto
                 self.flashMode = .auto
             }
@@ -295,4 +295,17 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
             
         })
     }
+    
+    func loadImage(nameString:String) -> UIImage{
+        let image = UIImage(named: nameString, in: Bundle(for: MMCameraCaptureViewController.classForCoder()), compatibleWith: nil)
+        
+        return image!
+    }
+    
+    static func loadImageStatic(nameString:String) -> UIImage{
+        let image = UIImage(named: nameString, in: Bundle(for: MMCameraCaptureViewController.classForCoder()), compatibleWith: nil)
+        
+        return image!
+    }
 }
+
