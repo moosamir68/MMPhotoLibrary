@@ -61,7 +61,7 @@ public class MMPhotosViewController: UIViewController, UICollectionViewDelegate,
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        self.collectionView.register(UINib(nibName: photoCellIdentifire, bundle: nil), forCellWithReuseIdentifier: photoCellIdentifire)
+        self.collectionView.register(UINib(nibName: photoCellIdentifire, bundle: Bundle(for: MMPhotosViewController.classForCoder())), forCellWithReuseIdentifier: photoCellIdentifire)
         
         if let layout = self.collectionView!.collectionViewLayout as? UICollectionViewFlowLayout{
             let cellSize = layout.itemSize
