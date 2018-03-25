@@ -12,10 +12,7 @@ import TOCropViewController
 import SnapKit
 
 public protocol MMCameraCaptureDelegate {
-    func createPhotosCollection(fromController:MMCameraCaptureViewController?) -> MMPhotosViewController?
     func dismissCameraController(fromController:MMCameraCaptureViewController?)
-    func showCroperFromCameraController(fromController:MMCameraCaptureViewController?, image:UIImage?)
-    func dismissCroper(fromController:MMCameraCaptureViewController?, cropper:TOCropViewController?)
     func resultCropImage(fromController:MMCameraCaptureViewController?, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int)
 }
 
@@ -42,6 +39,14 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     var flashMode:UIImagePickerControllerCameraFlashMode = .auto
     var cameraDevice:UIImagePickerControllerCameraDevice = .rear
     var sourceType:UIImagePickerControllerSourceType = .camera
+    
+    public init() {
+        super.init(nibName: "MMCameraCaptureViewController", bundle: Bundle(for: MMCameraCaptureViewController.classForCoder()))
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -164,7 +169,8 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
             }
         }else{
             self.imagePicker?.view.removeFromSuperview()
-            self.photoController = self.delegate?.createPhotosCollection(fromController: self)
+            self.photoController = MMPhotosViewController()
+            self.photoController?.delegate = self
             self.cameraView.addSubview((self.photoController?.view)!)
             
             self.photoController?.view.snp.makeConstraints { (make) in
@@ -231,7 +237,7 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.takeImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         UIImageWriteToSavedPhotosAlbum(self.takeImage!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-        self.delegate?.showCroperFromCameraController(fromController: self, image: self.takeImage)
+        self.showCroper(image: self.takeImage)
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -247,7 +253,7 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     
     //MARK:- as photos delegate
     public func resultSelectPhotoFromPhotos(image: UIImage?) {
-        self.delegate?.showCroperFromCameraController(fromController: self, image: image)
+        self.showCroper(image: image)
     }
     
     //MARK:- notificaiton volume
@@ -274,6 +280,19 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     }
     
     public func cropViewController(_ cropViewController: TOCropViewController, didFinishCancelled cancelled: Bool) {
-        self.delegate?.dismissCroper(fromController: self, cropper: cropViewController)
+        cropViewController.dismiss(animated: true) {
+            
+        }
+    }
+    
+    func showCroper(image: UIImage?){
+        let controller = TOCropViewController(croppingStyle: .default, image: image!)
+        controller.toolbar.cancelTextButton.setTitle("Cancel", for: .normal)
+        controller.toolbar.doneTextButton.setTitle("Done", for: .normal)
+        controller.delegate = self
+        
+        self.present(controller, animated: true, completion: {
+            
+        })
     }
 }
