@@ -24,6 +24,14 @@ public class MMPhotosViewController: UIViewController, UICollectionViewDelegate,
     
     public var delegate:MMPhotosDelegate?
     
+    public init() {
+        super.init(nibName: "MMPhotosViewController", bundle: Bundle(for: MMPhotosViewController.classForCoder()))
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
 
