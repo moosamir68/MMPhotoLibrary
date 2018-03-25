@@ -29,10 +29,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'MMPhotoLibrary/Classes/**/*'
-  
-    s.resource_bundles = {
-        'MMPhotoLibrary' => ['Assests.xcassets/*.imageset/*.png','Classes/*.xib']
-    }
+
+  s.resource = ['MMPhotoLibrary/Assests.xcassets',  'MMPhotoLibrary/Classes/*.xib']
+
+#   s.resource_bundles = {
+#       'MMPhotoLibrary' => ['Assests.xcassets/*.imageset/*.png','Classes/*.xib']
+#}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
