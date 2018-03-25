@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MMPhotoLibrary/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MMPhotoLibrary' => ['MMPhotoLibrary/Assets/*.png']
-  # }
+    s.resource_bundles = {
+        'MMPhotoLibrary' => ['Assests.xcassets/*.imageset/*.png','Classes/*.xib']
+    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'

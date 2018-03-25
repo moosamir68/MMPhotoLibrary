@@ -216,7 +216,7 @@
 		40E78D279D4803E6C9EB89F0D24BB561 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TOCropViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
 		437AE6C137119B03A261FC14C7DC1111 /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = "Objective-C/TOCropViewController/Models/TOCropViewControllerTransitioning.m"; sourceTree = "<group>"; };
 		4406DA5897D54BBA1599E4839F29BAEC /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		4468FF6A2067FADD00DADD5F /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assests.xcassets; sourceTree = "<group>"; };
+		4468FF952068028F00DADD5F /* Assests.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assests.xcassets; path = MMPhotoLibrary/Assests.xcassets; sourceTree = "<group>"; };
 		46A5BF3D35BF88770A22BF80185A57C4 /* MMPhotoLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMPhotoLibrary-prefix.pch"; sourceTree = "<group>"; };
 		4E6340422B364CC71652A3C6005C07A5 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		4EAB317541D48CCA80A1FF345B283D03 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
@@ -602,13 +602,13 @@
 		C3B5FCC30A58337D5BA7C98100021815 /* MMPhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				4468FF952068028F00DADD5F /* Assests.xcassets */,
 				55BE6157937478781B4057FB75936EB5 /* MMCameraCaptureViewController.swift */,
 				18704889441953CE0405F8AC9CC0BDDD /* MMCameraCaptureViewController.xib */,
 				5F7679BCCB7C2B97802F56845C7114BA /* MMPhotosViewController.swift */,
 				4F373CBCC3A633BAD8DB0E9B5276DB6B /* MMPhotosViewController.xib */,
 				9F0B3E3315E6ABC48D0286C421FFB122 /* Support Files */,
 				1F421925586A5E3A03982FE91CD46B3B /* View */,
-				4468FF6A2067FADD00DADD5F /* Assests.xcassets */,
 			);
 			name = MMPhotoLibrary;
 			path = ../..;
