@@ -276,7 +276,9 @@ public class MMCameraCaptureViewController: UIViewController, MMPhotosDelegate, 
     }
     
     public func cropViewController(_ cropViewController: TOCropViewController, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int) {
-        self.delegate?.resultCropImage(fromController: self, didCropToImage: image, rect: cropRect, angle: angle)
+        cropViewController.dismiss(animated: true) {
+            self.delegate?.resultCropImage(fromController: self, didCropToImage: image, rect: cropRect, angle: angle)
+        }
     }
     
     public func cropViewController(_ cropViewController: TOCropViewController, didFinishCancelled cancelled: Bool) {
